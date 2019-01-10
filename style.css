@@ -1,0 +1,23 @@
+/*Add a CSS stylesheet that styles all of your pages.*/
+
+body {
+	font-family: Arial;
+	background: #555;
+}
+.header {
+	padding: 20px;
+	text-align: center;
+	background: DodgerBlue;
+	color: white;
+	font-size: 30px;
+}
+.content {
+	max-width: 500px;
+	margin: auto;
+	background: white;
+	padding: 20px;
+}
+.button1 {
+	background-color:DodgerBlue; 
+	text-align:center
+}

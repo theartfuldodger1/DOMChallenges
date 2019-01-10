@@ -1,0 +1,54 @@
+<!--Create an HTML page with two buttons that argue with each other.
+When one button is clicked, the text "I'm right" should be placed next to it.
+When the other button is clicked, the text is replaced with, "No, I'm right!"-->
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Argument DOM Challenge</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta  name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Arguing Buttons</h1>
+    <p>DOM Challenge</p>
+  </div>
+  <br>
+  <div class="content" style="max-width: 170px">
+    <div>
+          <button type="button" onclick='whoIsFirst(1);
+            document.getElementById("angerIssuesTop").innerHTML = imRight;
+            document.getElementById("angerIssuesBottom").innerHTML = noUrNot'>Click Me!</button>
+          <a id="angerIssuesTop"></a>
+    </div>
+    <br>
+    <div>
+        <button type="button" onclick='whoIsFirst(2);
+          document.getElementById("angerIssuesBottom").innerHTML = imRight;
+          document.getElementById("angerIssuesTop").innerHTML = noUrNot'>Click Me!</button>
+        <a id="angerIssuesBottom"></a>
+    </div>
+  </div>
+
+<script type="text/javascript">
+    let imRight = "I'm right!";
+    let noUrNot = " ";
+    let first = 0;
+    let last = 0;
+
+    function whoIsFirst(btnNum) {
+      if(first === 0) {
+        last = btnNum;
+        first = 1;
+      }
+      else if(first === 1 && last === btnNum)
+        first = 1;
+      else {
+        first = 2;
+        imRight = "No, I'm right!";
+      }
+    }
+  </script>
+</body>
+</html>
